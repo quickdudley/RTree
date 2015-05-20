@@ -131,7 +131,7 @@ var RTree = function(width){
 				  }
 					i -= 1;
 				}
-			} else if("nodes" in ret_obj) { // We are unsplitting
+			} else if("nodes" in ret_obj && ret_obj.nodes.length > 0) { // We are unsplitting
 				tree.nodes.splice(i+1, 1); // Remove unsplit node
 				// ret_obj.nodes contains a list of elements removed from the tree so far
 				if(tree.nodes.length > 0)
